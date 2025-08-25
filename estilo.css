@@ -1,12 +1,17 @@
+/* inicio do css para o index*/
+
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background: linear-gradient(135deg, #0D1B2A, #FFA500, #FFFFFF);
+    color: #FFA500;
 }
 
 header {
-    background-color: #333;
-    color: white;
+    background-color: #0D1B2A;
+    color: rgb(255, 255, 255);
     padding: 10px 0;
 }
 
@@ -18,7 +23,7 @@ nav ul {
 }
 
 nav ul li a {
-    color: white;
+    color: #FFA500;
     text-decoration: none;
 }
 
@@ -29,6 +34,62 @@ main {
 footer {
     text-align: center;
     padding: 10px;
-    background-color: #333;
-    color: white;
+    background-color: #0D1B2A;;
+    color: #FFA500;
 }
+
+/* fim do css para o index*/
+
+
+
+/* inicio do css para o portifolio*/
+
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.trabalho {
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 300px;
+    text-align: center;
+}
+
+.trabalho img {
+    width: 100%;
+    height: auto;
+}
+
+/* Fim do css para o portifolio*/
+
+/* Incio do css contato */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+input, textarea, button {
+    padding: 8px;
+    border-radius: 4px;
+    border: none;
+}
+
+button {
+    background-color: #FF7F50;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #FFA500;
+}
+
+/* Fim do css contato */
