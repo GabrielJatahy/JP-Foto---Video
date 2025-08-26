@@ -1,49 +1,70 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato - JP Foto & Vídeo</title>
-    <link rel="stylesheet" href="estilo.css">
+    <meta charset="UTF-8"> <!-- Define a codificação do documento -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsivo em celulares -->
+    <title>Contato JP Foto & Vídeo</title> <!-- Título que aparece na aba do navegador -->
+    <link rel="stylesheet" href="estilo.css"> <!-- Conecta o arquivo CSS externo -->
 </head>
+
 <body>
     <!-- Cabeçalho com menu -->
     <header>
         <nav>
             <ul>
+                <!-- Links de navegação -->
                 <li><a href="index.html">Início</a></li>
-                <li><a href="portfolio.html">Portfólio</a></li>
+                <li><a href="portifolio.html">Portifolio</a></li>
                 <li><a href="contato.html">Contato</a></li>
             </ul>
+            <!-- Logo da empresa -->
+            <img src="Imagens/LogoEmpressa.jpeg" alt="Logo JP Foto & Vídeo" class="logo">
         </nav>
     </header>
 
     <main>
+        <!-- Seção de contato -->
         <section id="contato">
-            <h1>Contato</h1>
-            <p>Envie sua mensagem para nós:</p>
+            <h1>Contato</h1> <!-- Título principal da seção -->
+            <p>Envie sua mensagem para nós:</p> <!-- Texto explicativo -->
 
-            <form action="#" method="post">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required>
+            <!-- Formulário de envio -->
+            <!-- 'action' define para qual arquivo PHP os dados serão enviados -->
+            <!-- 'method="post"' envia os dados de forma segura -->
+            <form action="php/processa_contato.php" method="post">
 
+                <!-- Campo de nome -->
+                <label for="nome">Nome:</label> <!-- 'for' associa o label ao input -->
+                <input type="text" id="nome" name="nome" required> <!-- 'required' torna obrigatório -->
+
+                <!-- Campo de e-mail -->
                 <label for="email">E-mail:</label>
                 <input type="email" id="email" name="email" required>
 
+                <!-- Campo de WhatsApp -->
                 <label for="whatsapp">WhatsApp:</label>
                 <input type="text" id="whatsapp" name="whatsapp" required>
 
+                <!-- Campo de data de nascimento/fundação -->
+                <label for="dataFundacao">Data de Nascimento/Fundação:</label>
+                <input type="date" id="dataFundacao" name="dataFundacao">
+                <!-- 'type="date"' abre o seletor de data no navegador -->
+
+                <!-- Campo de mensagem -->
                 <label for="mensagem">Mensagem:</label>
                 <textarea id="mensagem" name="mensagem" required></textarea>
 
+                <!-- Botão de envio -->
                 <button type="submit">Enviar</button>
             </form>
         </section>
     </main>
 
+    <!-- Rodapé -->
     <footer>
         <p>&copy; 2025 JP Foto & Vídeo</p>
-        <p>&copy; Desenvolvido por Gabriel Jatahy</p>
+        <p>Desenvolvido por Gabriel Jatahy</p>
     </footer>
 </body>
 </html>

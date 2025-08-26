@@ -1,46 +1,77 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title> Portifolio - JP Foto & Video</title>
-        <link rel="stylesheet" href="estilo.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portifolio JP Foto & Vídeo</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="portifolio.html">Portifolio</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+            <img src="Imagens/LogoEmpressa.jpeg" alt="Logo JP Foto & Vídeo" class="logo">
+        </nav>
+    </header>
 
-    <body>
-        <!-- Cabeçalho com menu -->
-         <header>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="portifolio.html">Portifolio</a></li>
-                    <li><a href="contato.html">Contatos</a></li>
-                </ul>
-            </nav>
-         </header>
+    <main>
+        <section id="portifolio">
+            <h1 class="scroll-reveal">Portifolio de Trabalhos</h1>
 
-         <main>
-            <section id="portifolio">
-                <h1>Portifolio de Trabalhos</h1>
-                <!--Trabalho 1-->
-                <div class="Trabalho">
-                    <img src="/Imagens/LogoEmpressa.jpeg" alt="Trabalho 1">
-                    <h3>Titulo do Trabalho 1</h3>
-                    <p>descrição do Trabalho 1</p>
+            <!-- Trabalho 1 -->
+            <div class="trabalho scroll-reveal">
+                <div class="texto scroll-reveal">
+                    <h3>Título do Trabalho 1</h3>
+                    <p>Descrição do Trabalho 1</p>
                 </div>
-
-                <!--Trabalho 2-->
-                <div class="Trabalho">
-                    <img src="/Imagens/LogoEmpressa.jpeg" alt="Trabalho 2">
-                    <h3>Titulo do trabalho 2</h3>
-                    <p>descrição do trabalho 2</p>
+                <div class="imagem scroll-reveal">
+                    <img src="Imagens/LogoEmpressa.jpeg" alt="Trabalho 1">
                 </div>
-            </section>
-         </main>
+            </div>
 
-         <footer>
-            <p>&copy; 2025 JP Foto & Video</p>
-            <p>&copy; Desenvolvido por Gabriel Jatahy</p>
-         </footer>
-    </body>
+            <!-- Trabalho 2 -->
+            <div class="trabalho reverse scroll-reveal">
+                <div class="texto scroll-reveal">
+                    <h3>Título do Trabalho 2</h3>
+                    <p>Descrição do Trabalho 2</p>
+                </div>
+                <div class="imagem scroll-reveal">
+                    <img src="Imagens/LogoEmpressa.jpeg" alt="Trabalho 2">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 JP Foto & Video</p>
+        <p>&copy; Desenvolvido por Gabriel Jatahy</p>
+    </footer>
+
+    <script>
+        const scrollElements = document.querySelectorAll(".scroll-reveal");
+
+        const elementInView = (el, dividend = 1) => {
+            const elementTop = el.getBoundingClientRect().top;
+            return elementTop <= (window.innerHeight || document.documentElement.clientHeight) / dividend;
+        };
+
+        const displayScrollElement = (element) => element.classList.add("active");
+        const hideScrollElement = (element) => element.classList.remove("active");
+
+        const handleScrollAnimation = () => {
+            scrollElements.forEach(el => {
+                if (elementInView(el, 1.25)) displayScrollElement(el);
+                else hideScrollElement(el);
+            });
+        };
+
+        window.addEventListener("scroll", handleScrollAnimation);
+        window.addEventListener("load", handleScrollAnimation);
+    </script>
+</body>
 </html>
