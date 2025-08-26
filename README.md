@@ -1,2 +1,2 @@
 # JP-Foto---Video
-Site para empresa de foto e vídeo
+Site para empresa de foto e vídeo.
