@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portifolio JP Foto & Vídeo</title>
     <link rel="stylesheet" href="estilo.css">
 </head>
+
 <body>
     <!-- Cabeçalho -->
     <header>
@@ -13,7 +15,9 @@
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="portifolio.html">Portifolio</a></li>
-                <li><a href="contato.html">Contato</a></li>
+                <li><a href="redes.html">Nossas Redes</a></li>
+                <li><a href="cadastro.html">Cadastre-se</a></li>
+
             </ul>
             <img src="Imagens/LogoEmpressa.jpeg" alt="Logo JP Foto & Vídeo" class="logo">
         </nav>
@@ -23,27 +27,58 @@
         <section id="portifolio">
             <h1 class="scroll-reveal">Portifolio de Trabalhos</h1>
 
-            <!-- Trabalho 1 -->
-            <div class="trabalho scroll-reveal">
-                <div class="texto scroll-reveal">
-                    <h3>Título do Trabalho 1</h3>
-                    <p>Descrição do Trabalho 1</p>
-                </div>
-                <div class="imagem scroll-reveal">
-                    <img src="Imagens/LogoEmpressa.jpeg" alt="Trabalho 1">
-                </div>
-            </div>
+           <!-- Trabalho 1 -->
+<div class="trabalho scroll-reveal">
+    <div class="texto scroll-reveal">
+        <h3>Título do Trabalho 1</h3>
+        <p>Este trabalho de fotografia foi desenvolvido com o objetivo de capturar momentos únicos e transmitir emoções através da imagem. A proposta é explorar diferentes ângulos, iluminação e composições para destacar a beleza do instante fotografado.
 
-            <!-- Trabalho 2 -->
-            <div class="trabalho reverse scroll-reveal">
-                <div class="texto scroll-reveal">
-                    <h3>Título do Trabalho 2</h3>
-                    <p>Descrição do Trabalho 2</p>
-                </div>
-                <div class="imagem scroll-reveal">
-                    <img src="Imagens/LogoEmpressa.jpeg" alt="Trabalho 2">
-                </div>
+A técnica utilizada busca valorizar tanto os detalhes quanto a naturalidade da cena, proporcionando ao espectador uma experiência visual imersiva. O foco está em transmitir autenticidade e contar uma história por meio de cada clique.
+
+Mais do que apenas registrar, a fotografia aqui tem a função de eternizar momentos e transformá-los em arte, revelando novas perspectivas do cotidiano. </p>
+    </div>
+    <div class="imagem scroll-reveal">
+        <!-- Carrossel de imagens do Trabalho 1 -->
+        <div class="carousel-container">
+            <div class="carousel-track">
+                <img src="Imagens/imagemTeste1.jpg" alt="Trabalho 1 - Imagem 1">
+                <img src="Imagens/imagemTeste2.avif" alt="Trabalho 1 - Imagem 2">
+                <img src="Imagens/imagemTeste3.jpg" alt="Trabalho 1 - Imagem 3">
+                <!-- repetir para efeito contínuo -->
+                <img src="Imagens/imagemTeste1.jpg" alt="Trabalho 1 - Imagem 1">
+                <img src="Imagens/imagemTeste2.avif" alt="Trabalho 1 - Imagem 2">
+                <img src="Imagens/imagemTeste3.jpg" alt="Trabalho 1 - Imagem 3">
             </div>
+        </div>
+    </div>
+</div>
+
+<!-- Trabalho 2 -->
+<div class="trabalho reverse scroll-reveal">
+    <div class="texto scroll-reveal">
+        <h3>Título do Trabalho 2</h3>
+        <p>Este trabalho de fotografia foi desenvolvido com o objetivo de capturar momentos únicos e transmitir emoções através da imagem. A proposta é explorar diferentes ângulos, iluminação e composições para destacar a beleza do instante fotografado.
+
+A técnica utilizada busca valorizar tanto os detalhes quanto a naturalidade da cena, proporcionando ao espectador uma experiência visual imersiva. O foco está em transmitir autenticidade e contar uma história por meio de cada clique.
+
+Mais do que apenas registrar, a fotografia aqui tem a função de eternizar momentos e transformá-los em arte, revelando novas perspectivas do cotidiano.</p>
+    </div>
+    <div class="imagem scroll-reveal">
+        <!-- Carrossel de imagens do Trabalho 2 -->
+        <div class="carousel-container">
+            <div class="carousel-track">
+                <img src="Imagens/imagemTeste4.jpg" alt="Trabalho 2 - Imagem 1">
+                <img src="Imagens/imagemTeste5.jpg" alt="Trabalho 2 - Imagem 2">
+                <img src="Imagens/imagemTeste6.jpg" alt="Trabalho 2 - Imagem 3">
+                <!-- repetir para efeito contínuo -->
+                <img src="Imagens/imagemTeste4.jpg" alt="Trabalho 2 - Imagem 1">
+                <img src="Imagens/imagemTeste5.jpg" alt="Trabalho 2 - Imagem 2">
+                <img src="Imagens/imagemTeste6.jpg" alt="Trabalho 2 - Imagem 3">
+            </div>
+        </div>
+    </div>
+</div>
+
         </section>
     </main>
 
@@ -74,4 +109,5 @@
         window.addEventListener("load", handleScrollAnimation);
     </script>
 </body>
+
 </html>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8"> <!-- Define a codificação do documento -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsivo em celulares -->
-    <title>Contato JP Foto & Vídeo</title> <!-- Título que aparece na aba do navegador -->
+    <title>Cadastro - JP Foto & Vídeo</title> <!-- Título que aparece na aba do navegador -->
     <link rel="stylesheet" href="estilo.css"> <!-- Conecta o arquivo CSS externo -->
 </head>
 
@@ -16,27 +16,26 @@
                 <!-- Links de navegação -->
                 <li><a href="index.html">Início</a></li>
                 <li><a href="portifolio.html">Portifolio</a></li>
-                <li><a href="contato.html">Contato</a></li>
+                <li><a href="redes.html">Nossas Redes</a></li>
+                <li><a href="cadastro.html">Cadastre-se</a></li>
             </ul>
             <!-- Logo da empresa -->
             <img src="Imagens/LogoEmpressa.jpeg" alt="Logo JP Foto & Vídeo" class="logo">
         </nav>
     </header>
 
+    <!-- Conteúdo principal -->
     <main>
-        <!-- Seção de contato -->
+        <!-- Seção de cadastro -->
         <section id="contato">
-            <h1>Contato</h1> <!-- Título principal da seção -->
-            <p>Envie sua mensagem para nós:</p> <!-- Texto explicativo -->
+            <h1>Cadastro</h1> <!-- Título principal da seção -->
+            <p>Preencha o formulário abaixo para se cadastrar:</p> <!-- Texto explicativo -->
 
             <!-- Formulário de envio -->
-            <!-- 'action' define para qual arquivo PHP os dados serão enviados -->
-            <!-- 'method="post"' envia os dados de forma segura -->
-            <form action="php/processa_contato.php" method="post">
-
+            <form action="processa_cadastro.php" method="post">
                 <!-- Campo de nome -->
-                <label for="nome">Nome:</label> <!-- 'for' associa o label ao input -->
-                <input type="text" id="nome" name="nome" required> <!-- 'required' torna obrigatório -->
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
 
                 <!-- Campo de e-mail -->
                 <label for="email">E-mail:</label>
@@ -49,14 +48,13 @@
                 <!-- Campo de data de nascimento/fundação -->
                 <label for="dataFundacao">Data de Nascimento/Fundação:</label>
                 <input type="date" id="dataFundacao" name="dataFundacao">
-                <!-- 'type="date"' abre o seletor de data no navegador -->
 
                 <!-- Campo de mensagem -->
-                <label for="mensagem">Mensagem:</label>
-                <textarea id="mensagem" name="mensagem" required></textarea>
+                <label for="descricao">Descrição:</label>
+                <textarea id="descricao" name="descricao" required></textarea>
 
                 <!-- Botão de envio -->
-                <button type="submit">Enviar</button>
+                <button type="submit">Cadastrar</button>
             </form>
         </section>
     </main>
@@ -67,4 +65,5 @@
         <p>Desenvolvido por Gabriel Jatahy</p>
     </footer>
 </body>
+
 </html>

@@ -38,3 +38,5 @@ window.addEventListener("scroll", () => {
 
 // Chamada inicial para ativar elementos já visíveis
 handleScrollAnimation();
+
+

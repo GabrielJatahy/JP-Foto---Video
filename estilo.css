@@ -7,6 +7,10 @@ body {
     padding: 0;
     background: linear-gradient(135deg, #0D1B2A, #FFA500, #0D1B2A);
     color: #eceae4;
+
+    display: flex;            /* mantém footer no final */
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* Cabeçalho */
@@ -45,15 +49,16 @@ nav ul li a {
     color: #FFA500;
     text-decoration: none;
     font-weight: bold;
-    font-family: 'KG Simply the Best', cursive; /* mesma fonte do portfólio */
+    font-family: 'KG Simply the Best', cursive;
 }
 
 nav ul li a:hover {
     color: #fff;
 }
 
-/* Main e seções */
+/* Main */
 main {
+    flex: 1;
     padding: 20px;
 }
 
@@ -80,12 +85,12 @@ main {
     border-radius: 10px;
 }
 
-/* Títulos das seções (Sobre, Visão, Valores) */
+/* Títulos das seções */
 .flex-section .texto h1,
 .flex-section .texto h2 {
     text-align: center;
     text-decoration: underline;
-    font-family: 'KG Simply the Best', cursive; /* mesma fonte do portfólio e contato */
+    font-family: 'KG Simply the Best', cursive;
 }
 
 /* Rodapé */
@@ -102,7 +107,7 @@ p {
 
 img {
     border-radius: 50%;
-    border: 4px solid #f9fafd;
+    border: 4px solid #0D1B2A;
     box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.6);
     padding: 4px;
     background: #0D1B2A;
@@ -110,13 +115,13 @@ img {
 
 /* Estilo específico apenas para o logo */
 .logo {
-    border: none;          /* remove borda */
-    border-radius: 0;      /* remove arredondamento */
-    padding: 0;            /* remove padding */
-    box-shadow: none;      /* remove sombra */
-    background: none;      /* remove fundo */
-    width: auto;           /* mantém tamanho original */
-    height: auto;          /* mantém tamanho original */
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    box-shadow: none;
+    background: none;
+    width: auto;
+    height: auto;
 }
 
 iframe {
@@ -126,28 +131,9 @@ iframe {
     background:  #0D1B2A;
 }
 
-/* fim do css para o index*/
-
-/* inicio do css para o portifolio */
-
-.galeria {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.trabalho {
-    padding: 10px;
-    width: 300px;
-    text-align: center;
-}
-
-.trabalho img {
-    width: 100%;
-    height: auto;
-}
+/* =======================
+   CSS para o portfólio
+   ======================= */
 
 #portifolio h1 {
     text-decoration: underline;
@@ -169,7 +155,7 @@ iframe {
 }
 
 .trabalho .texto {
-    flex: 1;
+    flex: 2; /* agora o texto ocupa mais espaço */
     padding: 20px;
     text-align: left;   
 }
@@ -179,19 +165,45 @@ iframe {
 }
 
 .trabalho .imagem {
-    flex: 1;
+    flex: 1; /* carrossel ocupa menos espaço */
     text-align: center;
+    max-width: 300px; /* limite do carrossel */
 }
 
-.trabalho .imagem img {
-    max-width: 80%;
-    border-radius: 15px;   
-    box-shadow: 0 8px 15px rgba(0,0,0,0.5); 
+/* =======================
+   Carrossel de imagens
+   ======================= */
+.carousel-container {
+     width: 90%; 
+    overflow: hidden;
+    border-radius: 15px;
+    margin: 20px auto;
+    position: relative;
 }
 
-/* Fim do css para o portifolio*/
+.carousel-track {
+    display: flex;
+    animation: scroll 20s linear infinite;
+}
 
-/* Incio do css contato */
+.carousel-track img {
+    width: 250px;
+    margin-right: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgb(252, 252, 252);
+    border: 3px solid transparent; /* agora é transparente */
+    background: #0D1B2A;
+    padding: 4px;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* =======================
+   CSS contato
+   ======================= */
 form {
     display: flex;
     flex-direction: column;
@@ -217,14 +229,22 @@ button:hover {
     background-color:#FFA500;
 }
 
-#contato h1,p{
+#contato h1,p {
     text-align: center;
     font-family: 'KG Simply the Best', cursive;
 }
 
-/* Fim do css contato */
+/* =======================
+   Seção Nossas Redes
+   ======================= */
+#nossas-redes h1 {
+    text-align: center;
+    font-family: 'KG Simply the Best', cursive;
+}
 
-/* Scroll Reveal */
+/* =======================
+   Scroll Reveal
+   ======================= */
 .scroll-reveal {
     opacity: 0;
     transform: translateY(50px);
@@ -235,11 +255,38 @@ button:hover {
     opacity: 1;
     transform: translateY(0);
 }
+
 /* =======================
-   Responsividade para celulares e tablets
+   Redes sociais
+   ======================= */
+.redes-sociais {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.redes-sociais .rede-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 20%;        /* mantém o arredondamento se quiser */
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    border: none;              /* remove a borda */
+    box-shadow: none;          /* remove sombra */
+    background: transparent;   /* deixa o fundo transparente */
+}
+
+.redes-sociais .rede-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.7);
+}
+
+/* =======================
+   Responsividade
    ======================= */
 @media (max-width: 768px) {
-    /* Seções flex passam a ficar em coluna */
     .flex-section {
         flex-direction: column;
         padding: 30px 10px;
@@ -259,16 +306,15 @@ button:hover {
     }
 
     .trabalho.reverse {
-        flex-direction: column; /* mantém coluna mesmo se fosse invertido */
+        flex-direction: column;
     }
 
     .trabalho .texto,
     .trabalho .imagem {
         text-align: center;
-        flex: unset; /* remove flex 1 */
+        flex: unset;
     }
 
-    /* Menu centralizado verticalmente */
     nav ul {
         flex-direction: column;
         position: static;
@@ -286,5 +332,19 @@ button:hover {
         position: static;
         display: block;
         margin: 10px auto;
+    }
+
+    .carousel-track img {
+        width: 80%;
+        margin-right: 10px;
+    }
+
+    .redes-sociais {
+        gap: 20px;
+    }
+    
+    .redes-sociais .rede-icon {
+        width: 60px;
+        height: 60px;
     }
 }

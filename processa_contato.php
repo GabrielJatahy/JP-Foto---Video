@@ -18,7 +18,7 @@ $nome = $_POST['nome'] ?? '';
 $email = $_POST['email'] ?? '';
 $whatsapp = $_POST['whatsapp'] ?? '';
 $dataFundacao = $_POST['dataFundacao'] ?? null;
-$mensagem = $_POST['mensagem'] ?? '';
+$mensagem = $_POST['descricao'] ?? '';
 
 // Validar campos obrigatórios
 if(empty($nome) || empty($email) || empty($whatsapp) || empty($mensagem)){
@@ -31,7 +31,7 @@ $stmt->bind_param("sssss", $nome, $email, $whatsapp, $dataFundacao, $mensagem);
 
 // Executa a query e redireciona para página de agradecimento
 if($stmt->execute()){
-    header("Location: ../obrigado.html"); // redireciona para a página de agradecimento
+    header("Location: /obrigado.html"); // redireciona para a página de agradecimento
     exit(); // importante para parar a execução do script
 } else {
     die("Erro ao enviar: " . $stmt->error);
